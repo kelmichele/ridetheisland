@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixins";
+
+
+header {@include sec-default(); padding: 15px;}
+.logo-img {width: 40%;}
+
+.megamenu-parent {list-style:none;padding:0;margin:0;z-index:9;display:block;float:right;
+    li{display:inline-block;position:relative;padding:0;border-top: 3px solid transparent; margin: 0 15px;
+        &:last-child{margin-right: 5px;}
+        a{display:inline-block;font-size: 14px; color: $gray; font-weight: 600; text-transform: uppercase; line-height: 70px; padding-top:10px; }
+    }
+
+    // li.has-child>a:after{font-family:"FontAwesome";content:" \f107"}
+
+    .dropdown{width:auto;margin:0;margin-top:-1px;position:absolute;z-index:999;display:none;}
+    .has-child:hover >.dropdown{display:block;width:175px; }
+    .dropdown .dropdown-items{list-style:none;padding:0;margin:0;text-transform:uppercase;}
+    .dropdown .dropdown-inner{background: $dark;padding:0px;box-shadow:0 3px 5px 0 rgba($black,0.2); }
+
+    .dropdown li.menu-item{margin-left:0;display:block;padding:0;position:relative;width: 100%; border-top: none;border-bottom: 1px dotted rgba($gray, .3);
+        &:last-child {border-bottom: none;}
+        a{width:100%;display:block;padding:10px;color:$white;cursor:pointer;font-size:14px; line-height: 2em;
+            &:hover{color:$gray}
+        }
+    }
+}

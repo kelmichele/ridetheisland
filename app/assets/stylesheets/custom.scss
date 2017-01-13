@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,100,200,500,600,800,700,900|Open+Sans:300italic,400italic,400,300,600,700,800);
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "variables";
+@import "mixins";
+
+ul {list-style-type: none;}
+a:hover {text-decoration: none;}
+
+.mobile-show{ display: none;}
+.mobile-hide{ display: block;}
+@include bp(md) {
+  .mobile-hide{ display: none;}
+  .mobile-show{ display: block;}
+}
+
+
+.scroll-up {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 15px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background-image: url(image_path('to-top.png'));
+    background-repeat: no-repeat;
+    background-color: $dark;
+    z-index: 100;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+
+    @include bp(tb) { right: 30px; }
+    @include bp(sm) { right: 15px; }
+}
+
+
+footer {@include sec-default(); background-color: $black; padding: 25px;}
