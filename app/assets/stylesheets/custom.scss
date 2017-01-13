@@ -16,6 +16,18 @@ a:hover {text-decoration: none;}
   .mobile-show{ display: block;}
 }
 
+.honey {position: absolute;left: -9999px;}
+
+.page-head {
+    @include sec-default ();
+    @include sec-bgimage ();
+    height:200px;
+
+    &.registration {
+        background-image: url(image_path('bike-run.jpg'));
+    }
+}
+
 
 .scroll-up {
     width: 40px;
@@ -36,6 +48,5 @@ a:hover {text-decoration: none;}
     @include bp(tb) { right: 30px; }
     @include bp(sm) { right: 15px; }
 }
-
 
 footer {@include sec-default(); background-color: $black; padding: 25px;}

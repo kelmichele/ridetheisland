@@ -1,5 +1,9 @@
 <% content_for :title do %>Register for the Ride<% end %>
 
+<div class="page-head registration">
+	<h1>Register for the Ride</h1>
+</div>
+
 <div class="main-content">
 	<div class="container">
 
@@ -29,7 +33,11 @@
 		        </div>
 
 		        <div class="form-group">
-		          <%= registration.text_area :content, placeholder: "Additional Message"%>
+		          <%= registration.text_field :people, placeholder: "Number of People"%>
+		        </div>
+
+		        <div class="form-group">
+		          <%= registration.text_field :bikes, placeholder: "Number of Bikes"%>
 		        </div>
 
 		        <div class="form-group honey">

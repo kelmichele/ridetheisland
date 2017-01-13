@@ -19,7 +19,7 @@ class RegistrationController < ApplicationController
   private
 
   def secure_params
-    params.require(:registration).permit(:name, :phone, :email, :content, :honey)
+    params.require(:registration).permit(:name, :phone, :email, :people, :bikes, :honey)
   end
 
 end
