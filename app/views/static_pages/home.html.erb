@@ -2,13 +2,61 @@
 <% @page_description = "New Description" %>
 
 <div class="fullsite-intro">
-  <%= image_tag( 'biker.jpg', alt: 'Ride the Island Orange Beach, Al Introduction', class: 'img-responsive') %>
+  <!-- <%= image_tag( 'biker.jpg', alt: 'Ride the Island Orange Beach, Al Introduction', class: 'img-responsive') %>  -->
+  <div class="container">
+		<div class="fullsite-header">
+			<h1>Ride the Island Poker Run</h1>
+			<h2>A Ride to Survive</h2>
+		</div>
+  </div>
 </div>
 
 <div class="main-content">
 	<div class="container">
-		<h1>Ride the Island</h1>
-		<h2>Ride to Survive</h2>
+		<div class="row">
+					<div class="col-md-4 col-xs-12">
+							<h3 class="bmargin-0">Don't miss out on the</h3>
+							<h2>Ride the Island Poker Run</h2>
+							<div class="clearfix p-top-2"></div>
+							<%= link_to "Register Here", registration_path, class: 'reg-btn' %>
+					</div>
+
+					<div class="col-md-7 col-md-offfset-1 col-xs-12">
+						<div class="details">
+							<h3>April 1, 2017</h3>
+							<h3>$25 per bike</h3>
+							<h3>Sign in at 2p.m. at The Wharf</h3>
+							<div class="col-md-8 col-xs-12"><hr></div>
+							<div class="clearfix"></div>
+
+							<h3>The Poker Run has (6?) stops, located all over the island. The after party will be held at The Wharf, with food from our sponsors, and live music from <span>The Whyte Caps</span>.</h3>
+						</div>
+					</div>
+
+					<!-- <div class="col-md-4 col-xs-12">
+						<h3>All proceeds from this event will be donated to the Pink Heals Tour</h3>
+						<div class="col-md-8 col-md-offset-2 col-xs-12"><%= image_tag('pink-heals-logo.png', alt: 'Pink Heals Inc. Logo', class: 'img-responsive') %></div>
+					</div> -->
+			</div>
+
+			<div class="row">
+				<div class="sponsors">
+					<div class="col-md-3 col-xs-12">
+						<%= link_to(image_tag( 'gl-logo.jpg', alt: 'Ride the Island Sponsor - Ginny Lane Bar and Grill', class: 'img-responsive sponsor-logo'), ginnylane_path ) %>
+					</div>
+
+					<div class="col-md-3 col-xs-12">
+						<%= link_to(image_tag( 'villagg-logo.png', alt: 'Ride the Island Sponsor - Villaggio Grille', class: 'img-responsive sponsor-logo'), villaggio_path ) %>
+					</div>
+
+					<div class="col-md-3 col-xs-12">
+						<%= link_to(image_tag( 'hotspot.png', alt: 'Ride the Island Sponsor - The Hot Spot Music and Grub', class: 'img-responsive sponsor-logo'), hotspot_path ) %>
+					</div>
+
+					<div class="col-md-3 col-xs-12">
+						<%= link_to(image_tag( 'wharf-logo.png', alt: 'Ride the Island Sponsor - The Wharf', class: 'img-responsive sponsor-logo'), wharf_path ) %>
+					</div>
+				</div>
+			</div>
 	</div>
 </div>
-

@@ -11,6 +11,34 @@
 .home {
 	.fullsite-intro {
 		@include sec-default();
-		padding-bottom:20px;
+		@include sec-bgimage();
+		background-image: url(image_path('bw-bikes.jpg'));
+		// background-position: center center;
+		height: 580px;
+		margin-bottom:20px;
+		position: relative;
+		z-index: 0;
+
+		&::before {@include before ();}
+
+		.fullsite-header {
+			@include sec-default();
+			text-align: center;
+			margin-top: 15%;
+			h1, h2 {color: $white;}
+			h1 {font-size: 70px; text-shadow: 1px 1px 2px rgba($black, .8);}
+			h2{font-size: 50px;}
+		}
 	}
+
+	.details {@include sec-default(); padding-bottom:40px; padding-left: 10%;
+		span {color: $green;}
+	}
+	.reg-btn { font-size: 18px;background-color: $yellow2; border-radius: 4px; padding: 10px 15px; text-align: center; color: $dark; font-weight: bold;
+		&:hover {@include ease(); background-color: $yellow;}
+	}
+
 }
+
+
+.registration {}
