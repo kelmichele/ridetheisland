@@ -5,18 +5,17 @@
 @import "variables";
 @import "mixins";
 
-.main-content {@include sec-default(); padding: 30px 0;}
+.main-content {@include sec-default(); padding: 30px 0 0; background-color: $offwhite;}
 
 
 .home {
 	.fullsite-intro {
 		@include sec-default();
 		@include sec-bgimage();
-		// background-image: url(image_path('bw-bikes.jpg'));
-		background-image: url(image_path('beach-bike1.jpg'));
+		// background-image: url(image_path('bike-bw2.jpg'));
 		// background-position: center center;
-		height: 580px;
-		// margin-bottom:20px;
+		background-image: url(image_path('beach-bike1.jpg'));
+		height: 550px;
 		position: relative;
 		z-index: 0;
 
@@ -33,35 +32,40 @@
 		}
 	}
 
-	.details {@include sec-default(); padding:0px 0 60px; margin-bottom: 30px;
-
-		.left { text-align: center; margin-top: -80px; background-color: $offwhite; padding: 15px 0 0;
+	.details {@include sec-default(); padding:0px 0 10px; margin-bottom: 30px; background-color: $offwhite;
+		.left { text-align: center; margin-top: -80px; background-color: $white; padding: 15px 0 0;
 				h3 {font-size: 25px; font-weight: bold; margin-bottom: 20px;}
-				// h3.last{margin-bottom: 20px;}
 				hr {margin: 5px 0 10px;}
 		}
-		.right { padding-top:20px;}
+		.right { padding-top:40px;}
 		span {color: $yellow2;}
-
-		.proceeds{@include sec-default();
-			img {display: inline-block; float: left; width: 25%; padding-right:10px;}
-			h3 {display: inline-block; width: 65%; margin-top:30px; font-weight: bold;}
-
-		}
 	}
+
 	.reg-btn { @include center-block(); font-size: 18px;background-color: $yellow2; border-radius: 4px; padding: 10px 15px; text-align: center; color: $dark; font-weight: bold;
 		&:hover {@include ease(); background-color: $yellow;}
 	}
 
-	#stops {
-		@include sec-default (); padding: 50px 0; position: relative; z-index: 0; background-color: $offwhite;
-		// @include sec-bgimage(); background-image: url(image_path('motorcycles2.jpg')); background-position: center center;
-    // &::before {@include before (); background-color: rgba($black, .6)}
+
+	.sponsors { @include sec-default (); padding: 40px 20px; background-color: $white;
+    h2 {text-align: center; margin-bottom:20px;}
+		.sponsor-box { text-align: center; border-left: 1px solid #dfdfdf; padding-left:25px; margin-left:25px;
+	    .sponsor-logo { display: inline-block; width: 40%; margin:auto; padding: 15px 20px;}
+	  }
+
+    .pinkheals{width: 30%; @include center-block(); margin-top: 25px; margin-bottom: 25px;}
+
+    .reg-btn {width: 45%;}
 	}
 
-	// iframe, .HzV7m-b7CEbf .i4ewOd-pzNkMb-tJHJj, .i4ewOd-pzNkMb-haAclf {background-color: $yellow;}
+	#stops {
+		@include sec-default (); padding: 50px 0; position: relative; z-index: 0; background-color: $offwhite;
+
+    h2 {margin-bottom: 20px; color: $yellow2;}
+    h3 {font-weight: bold; margin-bottom:20px;}
+	}
 }
 
-
-.registration {
+footer {
+	img {width:60%;}
+	ul li {display: inline-block; margin-right:30px; font-size: 20px; a{color: $white;}}
 }
