@@ -25,4 +25,8 @@ class LinksController < ApplicationController
 	def fb
 		redirect_to('https://www.facebook.com/jason.ramirez.796?fref=ts')
 	end
+
+	def map
+			redirect_to('https://www.google.com/maps/d/viewer?mid=1oOmh-Ngp1DrVbp8zCOYDiEDLDQ0&ll=30.28987137088031%2C-87.75571534147343&z=11')
+	end
 end

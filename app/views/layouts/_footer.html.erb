@@ -1,14 +1,12 @@
 <div class="clearfix"></div>
 <footer class="footer">
-	<div class="col-md-6 col-xs-12">
-			<%= mail_to "jason@ridetheislandob.com", encode: "hex", class: 'text-white' do %>
-        <h4 class="title">EMAIL</h4>
-        <span>jason@ri<span style="display:none">hexscramblewords</span>detheislandob.com</span>
-      <% end %>
-  <nav>
-    <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Registration", registration_path %></li>
-    </ul>
-  </nav>
+  <div class="container">
+  	<div class="col-md-6 col-xs-12">
+  			<%= mail_to "jason@ridetheislandob.com", encode: "hex", class: 'text-white' do %>
+          <h4 class="title">EMAIL</h4>
+          <span>jason@ri<span style="display:none">hexscramblewords</span>detheislandob.com</span>
+        <% end %>
+    </div>
+  </div>
 </footer>
+<a href="#" class="scroll-up">Scroll</a>

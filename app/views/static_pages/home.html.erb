@@ -2,11 +2,11 @@
 <% @page_description = "New Description" %>
 
 <div class="fullsite-intro">
-  <!-- <%= image_tag( 'biker.jpg', alt: 'Ride the Island Orange Beach, Al Introduction', class: 'img-responsive') %>  -->
   <div class="container">
 		<div class="fullsite-header">
 			<h1>Ride the Island Poker Run</h1>
 			<h2>A Ride to Survive</h2>
+			<h3>Benefitting Pink Heals Inc</h3>
 		</div>
   </div>
 </div>
@@ -14,33 +14,67 @@
 <div class="main-content">
 	<div class="container">
 		<div class="row">
-					<div class="col-md-4 col-xs-12">
-							<h3 class="bmargin-0">Don't miss out on the</h3>
-							<h2>Ride the Island Poker Run</h2>
-							<div class="clearfix p-top-2"></div>
-							<%= link_to "Register Here", registration_path, class: 'reg-btn' %>
+			<div class="col-md-10 col-md-offset-1 col-xs-12">
+				<div class="details">
+					<div class="col-md-4 col-xs-12 left">
+							<p class="bmargin-0">Don't miss out:</p>
+							<div class="col-md-8 col-md-offset-2 col-xs-12"><hr></div>
+							<div class="clearfix"></div>
+							<h3>April 1, 2017</h3>
+							<h3>Sign in: 2p.m.<br> Ride starts at 3p.m. </h3>
+							<h3 class="last">$25 per bike</h3>
+							<%= link_to "Register Now", registration_path, class: 'reg-btn' %>
 					</div>
 
-					<div class="col-md-7 col-md-offfset-1 col-xs-12">
-						<div class="details">
-							<h3>April 1, 2017</h3>
-							<h3>$25 per bike</h3>
-							<h3>Sign in at 2p.m. at The Wharf</h3>
-							<div class="col-md-8 col-xs-12"><hr></div>
-							<div class="clearfix"></div>
+					<div class="col-md-7 col-md-offset-1 col-xs-12 right">
+						<h3>Ride the Island Poker Run has 7 stops, located all over the island, starting and ending at The Wharf. There will be food provided by our sponsors, and live music from <span>The Whyte Caps</span> from 2-6p.m.</h3>
 
-							<h3>The Poker Run has (6?) stops, located all over the island. The after party will be held at The Wharf, with food from our sponsors, and live music from <span>The Whyte Caps</span>.</h3>
+						<div class="proceeds">
+								<%=image_tag('pink-heals-logo.png', alt: 'Ride the Island Poker Run, logo', class: 'img-responsive') %>
+								<h3>All proceeds from this event will be donated to Pink Heals Inc.</h3>
 						</div>
 					</div>
 
-					<!-- <div class="col-md-4 col-xs-12">
-						<h3>All proceeds from this event will be donated to the Pink Heals Tour</h3>
-						<div class="col-md-8 col-md-offset-2 col-xs-12"><%= image_tag('pink-heals-logo.png', alt: 'Pink Heals Inc. Logo', class: 'img-responsive') %></div>
-					</div> -->
-			</div>
 
-			<div class="row">
-				<div class="sponsors">
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<section id="stops">
+			<div class="container">
+				<div class="col-md-6">
+					<h3>Stops</h3>
+
+					<h4>The Wharf</h4>
+					<h4>Big Beach Brewing</h4>
+					<h4>Sassy Bass Amazin' Grill</h4>
+					<h4>Hooters</h4>
+					<h4>Gilbey's Seafood &amp; Steak</h4>
+					<h4>Flora Bama Yacht Club</h4>
+					<h4>Pleasure Island Tiki Bar</h4>
+				</div>
+				<div class="col-md-6">
+					<!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1oOmh-Ngp1DrVbp8zCOYDiEDLDQ0" width="99%" height="280"></iframe> -->
+					<!-- https://www.google.com/maps/d/viewer?mid=1oOmh-Ngp1DrVbp8zCOYDiEDLDQ0&ll=30.28987137088031%2C-87.75571534147343&z=11 -->
+            <%= link_to(image_tag( 'run-map.png', alt: 'Ride the Island Orange Beach, Al Logo', class: 'img-responsive'), map_path, :target => '_blank' ) %>
+
+				</div>
+			</div>
+		</section>
+
+					<!-- -->
+
+				<!-- 	<div class="col-md-3 col-xs-12">
+
+					</div> -->
+
+			<!-- <div class="col-md-3 col-xs-12">
+				<h3>All proceeds from this event will be donated to Pink Heals Inc.</h3>
+				<%=image_tag('pink-heals-logo.png', alt: 'Ride the Island Poker Run, logo', class: 'img-responsive') %>
+			</div> -->
+
+			<div id="sponsors" class="sponsors">
 					<div class="col-md-3 col-xs-12">
 						<%= link_to(image_tag( 'gl-logo.jpg', alt: 'Ride the Island Sponsor - Ginny Lane Bar and Grill', class: 'img-responsive sponsor-logo'), ginnylane_path ) %>
 					</div>
@@ -56,7 +90,6 @@
 					<div class="col-md-3 col-xs-12">
 						<%= link_to(image_tag( 'wharf-logo.png', alt: 'Ride the Island Sponsor - The Wharf', class: 'img-responsive sponsor-logo'), wharf_path ) %>
 					</div>
-				</div>
 			</div>
 	</div>
 </div>
