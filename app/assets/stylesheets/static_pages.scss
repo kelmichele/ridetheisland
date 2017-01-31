@@ -15,8 +15,6 @@
 	.fullsite-intro {
 		@include sec-default();
 		@include sec-bgimage();
-		// background-image: url(image_path('bike-bw2.jpg'));
-		// background-position: center center;
 		background-image: url(image_path('beach-bike1.jpg'));
 		height: 550px;
 		position: relative;
@@ -51,7 +49,6 @@
 	  }
 
     .pinkheals{width: 30%; @include center-block(); margin-top: 25px; margin-bottom: 25px;}
-
     .reg-btn {width: 45%;}
 	}
 
@@ -61,6 +58,40 @@
     h2 {margin-bottom: 20px; color: $yellow2;}
     h3 {font-weight: bold; margin-bottom:20px;}
 	}
+
+
+	@include bp(tb) {
+		.fullsite-intro {height:350px;
+			.fullsite-header {
+				margin-top: 18%;
+				h1 {font-size: 55px; margin-bottom:0}
+				h2{font-size: 40px;}
+			}
+		}
+
+		.details { padding-bottom: 0;
+			.left {margin-top: 0; padding-bottom: 10px;}
+		}
+		.right {padding: 15px; padding-bottom:0;}
+		.reg-btn {width: 45%;}
+
+		.sponsors { padding: 15px;
+			.proceeds{@include center-block(); width: 90%;}
+			.pinkheals{width: 22%; display: inline-block; float: left; margin: 5px 15px; margin-left: 0;}
+			h3 {padding: 25px 10px 10px;}
+			.reg-btn {width: 30%; margin-left: 50%;}
+
+			.sponsor-box { border-left:none; border-top: 1px solid #dfdfdf; padding-left:0px; margin-left:0; margin-top: 40px; padding-top: 25px;
+		    .sponsor-logo { width: 42%; margin:auto; padding: 15px 20px;}
+		  }
+		}
+
+		#stops { padding: 40px 0; text-align: center;
+	    h3 {display: inline-block; width: 45%; margin: 10px auto;}
+
+	    iframe{margin-top: 20px;}
+		}
+	}
 }
 
 .registration  {
@@ -69,7 +100,7 @@
 		.left{ width:90%; float: left;
 			@include sec-bgimage();
 			background-image: url(image_path('bike-bw1.jpg'));
-			position: relative; z-index: 0; padding: 30px 0 0px 30px;
+			position: relative; z-index: 0; padding: 30px 0 0px 50px;
 
 			&::before {@include before(); background-color: rgba( $green, .9);}
 
@@ -84,4 +115,22 @@
 		.details { padding-top: 30px;}
 		.top {@include sec-default(); padding-bottom: 30px; border-bottom: 1px solid #dfdfdf;}
 		.bottom {@include sec-default(); padding-top: 30px; }
+
+		@include bp(tb) {
+			.main-content {padding: 30px 0;}
+			.right {padding-top:30px; padding-left:0px;}
+			.left{width: 80%; margin-left: 10%; padding: 30px 0 0px 50px;}
+
+			.reg-btn { width:40%;
+				&.alt {width: 40%; float: right; margin-right: 20px;}
+			}
+			.details { padding-top: 30px;}
+			.top { text-align: center;
+				.img-p {width: 32%; float: left; margin-left: 7%; }
+				.details {float: right; width: 60%;}
+			}
+			.bottom {text-align: center;
+				.img-p {width: 30%; @include center-block();}
+			}
+		}
 }

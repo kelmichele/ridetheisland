@@ -86,3 +86,18 @@ footer {@include sec-default(); background-color: $white; padding-top: 25px; pad
         a {color: $yellow2;}
     }
 }
+
+@include bp(tb) {
+    footer { text-align: center;
+        ul {@include sec-default();
+            li {display: inline-block; font-size: 20px; }
+        }
+        p.copy{text-align: center;}
+    }
+}
+
+@include bp(md) {
+    footer {
+        ul li {display: inline-block; margin-right:15px; font-size: 20px; }
+    }
+}
