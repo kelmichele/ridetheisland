@@ -29,4 +29,8 @@ class LinksController < ApplicationController
 	def map
 			redirect_to('https://www.google.com/maps/d/viewer?mid=1oOmh-Ngp1DrVbp8zCOYDiEDLDQ0&ll=30.28987137088031%2C-87.75571534147343&z=11')
 	end
+
+	def hs
+			redirect_to('https://hsdesignhouse.com')
+	end
 end

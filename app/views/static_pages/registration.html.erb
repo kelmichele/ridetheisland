@@ -7,46 +7,61 @@
 
 <div class="main-content">
 	<div class="container">
-		<!-- <div class="col-md-3 col-xs-12"><%=image_tag('rti-logo.png', alt: 'Ride the Island Poker Run, logo', class: 'img-responsive') %></div> -->
 
-		<div class="col-md-5 col-md-offset-1 col-xs-12">
-				<div id="wufoo-z70faov0ovw0ag">
-					Fill out my <a href="https://ridetheislandob.wufoo.com/forms/z70faov0ovw0ag">online form</a>.
+		<div class="col-md-5 col-xs-12">
+			<div class="left">
+				<h3 class="bmargin-0">Ride the Island Registration</h3>
+				<h4>Complete one registration per bike.</h4>
+			 	<div class="col-md-11 col-md-offset-1 col-xs-12">
+					<div id="wufoo-z70faov0ovw0ag">
+						Fill out my <a href="https://ridetheislandob.wufoo.com/forms/z70faov0ovw0ag">online form</a>.
+					</div>
+					<script type="text/javascript">var z70faov0ovw0ag;(function(d, t) {
+					var s = d.createElement(t), options = {
+					'userName':'ridetheislandob',
+					'formHash':'z70faov0ovw0ag',
+					'autoResize':true,
+					'height':'480',
+					'async':true,
+					'host':'wufoo.com',
+					'header':'hide',
+					'ssl':true};
+					s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+					s.onload = s.onreadystatechange = function() {
+					var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+					try { z70faov0ovw0ag = new WufooForm();z70faov0ovw0ag.initialize(options);z70faov0ovw0ag.display(); } catch (e) {}};
+					var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+					})(document, 'script');</script>
 				</div>
-				<script type="text/javascript">var z70faov0ovw0ag;(function(d, t) {
-				var s = d.createElement(t), options = {
-				'userName':'ridetheislandob',
-				'formHash':'z70faov0ovw0ag',
-				'autoResize':true,
-				'height':'480',
-				'async':true,
-				'host':'wufoo.com',
-				'header':'show',
-				'ssl':true};
-				s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-				s.onload = s.onreadystatechange = function() {
-				var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-				try { z70faov0ovw0ag = new WufooForm();z70faov0ovw0ag.initialize(options);z70faov0ovw0ag.display(); } catch (e) {}};
-				var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-				})(document, 'script');</script>
+			</div>
 		</div>
 
-				<!-- <div class="col-md-3 col-xs-12">
-					<div class="proceeds">
-						<%=image_tag('pink-heals-logo.png', alt: 'Ride the Island Poker Run, logo', class: 'img-responsive pinkheals') %>
-						<h3 class="text-center">All proceeds from this event will be donated to Pink Heals Inc.</h3>
-							<%= link_to "Learn More", pink_path, target:'_blank', class: 'reg-btn' %>
+	 	<div class="col-md-7 col-xs-12 right">
+	 			<div class="col-md-12 top">
+		 			<div class="col-md-4 col-xs-12"><%=image_tag('rti-logo.png', alt: 'Ride the Island Poker Run, logo', class: 'img-responsive img-p') %></div>
+		 			<div class="col-md-8 details col-xs-12">
+					 	<div class="col-md-6 col-xs-12 no-padding">
+			 				<h3>April 1, 2017</h3>
+			 				<h3>Sign in: 2p.m.</h3>
+			 				<h3 class="last">$25 per bike</h3>
+			 			</div>
+
+					 	<div class="col-md-6 col-xs-12 no-padding">
+							<%= link_to "/#stops", class: 'reg-btn alt' do %>See Stops<% end %>
+							<%= link_to "/#sponsors", class: 'reg-btn alt' do %>See Sponsors<% end %>
+					 	</div>
 					</div>
-				</div>-->
-					<!-- <h2>Poker Run Stops</h2>
-						<h3>The Wharf</h3>
-						<h3>Big Beach Brewing</h3>
-						<h3>Sassy Bass Amazin' Grill</h3>
-						<h3>Hooters</h3>
-						<h3>Gilbey's Seafood &amp; Steak</h3>
-						<h3>Flora Bama Yacht Club</h3>
-						<h3>Pleasure Island Tiki Bar</h3> -->
-	    <div class="col-md-5 col-md-offset-1 col-xs-12 p-top-3"><%= image_tag( 'pinkheals-tour.jpg', alt: 'Ride the Island Orange Beach, Al Logo', class: 'img-responsive') %></div>
+		 		</div>
+
+
+	 			<div class="col-md-12 bottom">
+					<div class="col-md-8 col-xs-12">
+						<h3 class="p-top-2">All proceeds from this event will be donated to Pink Heals Inc.</h3>
+						<%= link_to "Learn More", pink_path, target:'_blank', class: 'reg-btn' %>
+					</div>
+					<div class="col-md-4 col-xs-12"><%=image_tag('pink-heals-logo.png', alt: 'Ride the Island Poker Run, Pink Heals Logo', class: 'img-responsive img-p') %></div>
+				</div>
 		</div>
 	</div>
 </div>
+

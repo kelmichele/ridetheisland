@@ -62,7 +62,7 @@ h1 {font-size: 55px;}
     height: 40px;
     position: fixed;
     bottom: 15px;
-    right: 100px;
+    right: 40px;
     display: none;
     text-indent: -9999px;
     background-image: url(image_path('to-top.png'));
@@ -77,4 +77,12 @@ h1 {font-size: 55px;}
     @include bp(sm) { right: 15px; }
 }
 
-footer {@include sec-default(); background-color: $black; padding: 25px;}
+footer {@include sec-default(); background-color: $white; padding-top: 25px; padding-bottom:5px;
+
+    ul li {display: inline-block; margin-right:30px; font-size: 20px; }
+
+    ul li a.nav-link, li, span {color: $yellow2;}
+    p.copy {color: $yellow2;
+        a {color: $yellow2;}
+    }
+}

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/hotspot', to: 'links#hotspot'
   get '/fb', to: 'links#fb'
   get '/map', to: 'links#map'
+  get '/hs', to: 'links#hs'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

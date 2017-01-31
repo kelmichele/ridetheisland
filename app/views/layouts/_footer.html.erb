@@ -1,19 +1,24 @@
 <div class="clearfix"></div>
 <footer class="footer">
-  <div class="container">
+  <div class="container-fluid">
     <!-- <div class="col-md-2"><%= link_to(image_tag( 'rti-logo3.png', alt: 'Ride the Island Orange Beach, Al Logo', class: 'img-responsive'), root_path ) %></div> -->
-		<div class="col-md-10 col-md-offset-1 col-xs-12">
+		<div class="col-md-8 col-xs-12">
 			<ul class="footer-nav">
-				<li>
-					<%= mail_to "jason@ridetheislandob.com", encode: "hex", class: 'text-white' do %>
-	          <span>jason@ri<span style="display:none">hexscramblewords</span>detheislandob.com</span>
-	        <% end %>
-        </li>
+
         <li><%= link_to "Home", root_path, class: 'nav-link' %></li>
         <li><%= link_to "/#stops", class: 'nav-link' do %>Stops<% end %></li>
         <li><%= link_to "/#sponsors", class: 'nav-link' do %>Sponsors<% end %></li>
         <li><%= link_to "Registration", registration_path, class: 'nav-link' %></li>
+        <li>Email us:
+          <%= mail_to "jason@ridetheislandob.com", encode: "hex" do %>
+             <span>jason@ri<span style="display:none">hexscramblewords</span>detheislandob.com</span>
+          <% end %>
+        </li>
       </ul>
+    </div>
+    <div class="col-md-3 col-md-offset-1 col-xs-12">
+      <p class="copy">Design by <%= link_to 'High Seas Design House', hs_path, target: '_blank' %>.</p>
+    </div>
 	</div>
 </footer>
 
