@@ -50,6 +50,10 @@
         @media (max-width: 768px)  { @content ; }
     }
 
+    @else if $point == mb {
+        @media (max-width: 670px)  { @content ; }
+    }
+
     @else if $point == sm {
         @media (max-width: 640px)  { @content ; }
     }

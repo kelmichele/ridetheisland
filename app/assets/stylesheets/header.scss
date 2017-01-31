@@ -20,9 +20,20 @@ header {@include sec-default(); padding: 5px;
 	}
 
 	@include bp(tb) {
-		.logo-block {display: inline-block; width: 17%; float: left;
+		.logo-block {display: inline-block; width: 20%; float: left;
 			.logo-img{@include sec-default();}
 		}
 		.mega-tab {display: inline-block; float: right;}
+		.megamenu-parent li a {line-height: 30px}
+	}
+
+	@include bp(mb) {
+		.megamenu-parent li a {line-height: 30px}
+	}
+
+	@include bp(sm) {
+		.logo-block {width: 40%; @include center-block ();}
+		.mega-tab {@include sec-default(); text-align: center;}
+		.megamenu-parent li a, .megamenu-parent li {line-height: 1em; border-top: none; padding-top:3px;}
 	}
 }
