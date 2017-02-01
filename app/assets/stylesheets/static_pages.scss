@@ -107,6 +107,7 @@
 
 	@include bp(mb) {
 		.fullsite-intro {height:300px; background-position: bottom right;
+	    &::before { background-color: rgba($black, .7)}
 			.fullsite-header {
 				margin-top: 15%;
 				h1 {font-size: 40px;}
@@ -209,6 +210,7 @@
 
 		@include bp(mb) {
 			.page-head {height:200px;
+		    &::before {background-color: rgba($black, .7)}
 		    .box {margin-top:14%;}
 			}
 			.main-content {padding-bottom: 10px;}

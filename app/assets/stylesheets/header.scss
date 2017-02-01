@@ -18,7 +18,7 @@ header {@include sec-default(); padding: 5px;position: absolute; z-index: 100;
 			.logo-img{@include sec-default();}
 		}
 		.mega-tab {display: inline-block; float: right;}
-		.megamenu-parent li a {line-height: 30px}
+		.megamenu-parent li a {line-height: 30px; text-shadow: $shadow;}
 	}
 
 	@include bp(mb) {
@@ -28,7 +28,7 @@ header {@include sec-default(); padding: 5px;position: absolute; z-index: 100;
 	@include bp(sm) {
 		.logo-block {width: 37%; @include center-block ();}
 		.logo-img {padding-bottom: 10px;}
-		.mega-tab {@include sec-default(); text-align: center; border-top:1px solid $white; border-bottom: 1px $white solid; padding-top: 7px;}
+		.mega-tab {@include sec-default(); text-align: center; background-color: rgba($black, .4); border-top:1px solid $white; border-bottom: 1px $white solid; padding-top: 7px;}
 		.megamenu-parent{ padding-left: 0; float: none;
 		 li a {line-height: 1em; padding-top:3px; margin:0}
 		}
