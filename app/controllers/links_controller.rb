@@ -7,11 +7,11 @@ class LinksController < ApplicationController
 	end
 
 	def ginnylane
-	    redirect_to('ginnylanebargrill.com')
+	    redirect_to('http://ginnylanebargrill.com')
 	end
 
-	def villagio
-	    redirect_to('villaggiogrille.com')
+	def villaggio
+	    redirect_to('http://villaggiogrille.com')
 	end
 
 	def hotspot

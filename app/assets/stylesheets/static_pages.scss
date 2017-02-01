@@ -42,8 +42,9 @@
 		span {color: $yellow2;}
 	}
 
-	.sponsors { @include sec-default (); padding: 60px 20px; background-color: $white;
-    h2 {text-align: center; margin-bottom:20px;}
+	.sponsors { @include sec-default (); padding: 40px 0px; background-color: $white;
+    h2 {text-align: center; margin-bottom:30px; font-weight: bold;}
+	  .sponsor-logo { padding: 5px 15px;}
 		.sponsor-box { text-align: center; border-left: 1px solid #dfdfdf; padding-left:25px; margin-left:25px;
 	    .sponsor-logo { display: inline-block; width: 40%; margin:auto; padding: 15px 20px;}
 	  }
@@ -52,11 +53,23 @@
     .reg-btn {width: 45%;}
 	}
 
+	.pinkheals { @include sec-default (); padding: 60px 20px; background-color: $offwhite;
+    h2 {text-align: center; margin-bottom:20px;}
+		.info-box { text-align: left; padding-left:25px; margin-left:25px;}
+		.proceeds {@include sec-default();  border-right: 1px solid #dfdfdf; padding-right:45px;}
+    .pinkheals-logo{width: 55%; @include center-block(); margin-bottom: 25px;}
+    .reg-btn {width: 30%; background-color: $pink;}
+    p { margin-bottom: 20px;
+    	span {font-weight: bold; font-size: 20px; line-height: 1.6em }
+    }
+	}
+
 	#stops {
-		@include sec-default (); padding: 60px 0; position: relative; z-index: 0; background-color: $offwhite;
+		@include sec-default (); padding: 60px 0; background-color: $white;
 
     h2 {margin-bottom: 20px; color: $yellow2;}
-    h3 {font-weight: bold; margin-bottom:20px;}
+    h3 {font-weight: bold; margin-bottom:15px; }
+    	iframe {float: right;}
 	}
 
 
@@ -76,21 +89,19 @@
 		.right {display: inline-block; width: 55%; padding: 15px 15px 0 30px; }
 		.reg-btn {width: 45%;}
 
-		.sponsors { padding: 15px;
-			.proceeds{@include center-block(); width: 90%;}
-			.pinkheals{width: 22%; display: inline-block; float: left; margin: 5px 15px; margin-left: 0;}
-			h3 {padding: 25px 10px 10px;}
-			.reg-btn {width: 30%; margin-left: 50%;}
-
-			.sponsor-box { border-left:none; border-top: 1px solid #dfdfdf; padding-left:0px; margin-left:0; margin-top: 40px; padding-top: 25px;
-		    .sponsor-logo { width: 42%; margin:auto; padding: 15px 20px;}
-		  }
-		}
-
 		#stops { padding: 40px 0; text-align: center;
 	    h3 {display: inline-block; width: 45%; margin: 10px auto;}
+	    iframe{margin-top: 20px; float: none;}
+		}
 
-	    iframe{margin-top: 20px;}
+		.pinkheals { padding: 30px 20px; text-align: center;
+			.info-box { padding:0 20px; margin: auto;}
+			.proceeds {border-right:none; padding:0px;}
+	    .pinkheals-logo{width: 35%;}
+		}
+
+		.sponsors { text-align:center;
+			.spons {display: inline-block; width: 42%; margin: auto; margin-bottom:20px;}
 		}
 	}
 
@@ -102,13 +113,17 @@
 				h2{font-size: 35px;}
 			}
 		}
+
+		.details {
+			.reg-btn {width: 80%;}
+		}
 	}
 
 	@include bp(sm) {
 		.fullsite-intro {height:320px; background-position: top left;
 			background-image: url(image_path('beach-bike1-sm.jpg'));
 			.fullsite-header {
-				margin-top: 50%;
+				margin-top: 54%;
 				h1 {font-size: 30px;}
 				h2{font-size: 27px;margin-bottom: 0;}
 			}
@@ -118,28 +133,38 @@
 			.left {@include sec-default(); margin-top: 0; padding-bottom: 10px;}
 		}
 		.right {@include sec-default(); padding: 15px 15px 0 30px; }
-		.reg-btn {width: 45%;}
-
-		.sponsors { padding:15px 0;
-			.proceeds{@include sec-default(); }
-			.pinkheals{width: 42%; @include center-block();}
-			.reg-btn {width: 70%; margin-left: 15%;}
-			h3 {padding: 20px 0px 10px;}
-
-			.sponsor-box {
-		    .sponsor-logo { width: 85%; @include center-block(); padding: 20px;}
-		  }
-		}
 
 		#stops {
-	    h3 {@include sec-default();}
-	    iframe{margin-top: 20px;}
+	    h3 {@include sec-default(); margin-bottom: 5px}
 		}
+
+		.pinkheals { padding: 30px 0px;
+			.info-box { padding: 0px;}
+	    .pinkheals-logo{margin-bottom:10px;}
+	    .reg-btn {width: 80%;}
+		}
+
+		.sponsors { padding:20px 0;
+			.spons { width: 70%; @include center-block();}
+		}
+	}
+
+	@include bp(xs) {
+		.fullsite-intro {height:290px;
+			.fullsite-header {
+				margin-top: 55%;
+				// padding-top:15px;
+				h1 {font-size: 25px;}
+				h2, h3 {font-size: 20px;}
+			}
+		}
+
+		.pinkheals h3 {font-size: 19px;}
 	}
 }
 
 .registration  {
-		.main-content {padding: 60px 0;}
+		.main-content {padding: 60px 0;background-color: $white;}
 		.right {padding-top:30px; padding-left:30px;}
 		.left{ width:90%; float: left;
 			@include sec-bgimage();

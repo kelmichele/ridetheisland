@@ -2,22 +2,16 @@
 @import "mixins";
 
 
-header {@include sec-default(); padding: 5px;
+header {@include sec-default(); padding: 5px;position: absolute; z-index: 100;
 
 	.logo-img {width: 35%; padding: 5px;}
-	.megamenu-parent {list-style:none;padding:0;margin:0;z-index:9;display:block;float:right;
-	    li{display:inline-block;position:relative;padding:0;border-top: 3px solid transparent; margin: 0 15px;
-	        &:last-child{margin-right: 5px;}
-	        a{display:inline-block;font-size: 16px; font-family: $open; color: $gray; text-transform: uppercase; line-height: 70px; padding-top:10px; }
-	    }
+	.megamenu-parent {display:block;float:right;
+    li{display:inline-block;margin: 0 15px; padding-top:10px;
+      a{font-size: 16px; font-family: $open; color: $white; font-weight: 600; text-transform: uppercase; line-height: 70px;}
+	    &:hover a, &:hover i {color: $yellow2; @include ease();}
+    }
 	}
 	i.fa{color: $white; font-size: 16px;}
-
-	&.light {
-		// background-color: rgba($black, .3);
-		position: absolute; z-index: 100;
-		.megamenu-parent li a {color: $white; font-weight: 600;}
-	}
 
 	@include bp(tb) {
 		.logo-block {display: inline-block; width: 20%; float: left;
@@ -34,7 +28,12 @@ header {@include sec-default(); padding: 5px;
 	@include bp(sm) {
 		.logo-block {width: 37%; @include center-block ();}
 		.logo-img {padding-bottom: 10px;}
-		.mega-tab {@include sec-default(); text-align: center; border-top:1px solid $white; border-bottom: 1px $white solid; padding-bottom: 5px;}
-		.megamenu-parent li a, .megamenu-parent li {line-height: 1em; border-top: none; padding-top:3px;}
+		.mega-tab {@include sec-default(); text-align: center; border-top:1px solid $white; border-bottom: 1px $white solid; padding-top: 7px;}
+		.megamenu-parent{ padding-left: 0; float: none;
+		 li a {line-height: 1em; padding-top:3px; margin:0}
+		}
+	}
+	@include bp(xs) {
+		.megamenu-parent li { margin-right:0}
 	}
 }

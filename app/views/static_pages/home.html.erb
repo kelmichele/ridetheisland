@@ -35,37 +35,11 @@
 	</div>
 	<div class="clearfix"></div>
 
-	<section id="sponsors" class="sponsors">
-		<div class="container">
-				<div class="col-md-4 col-xs-12">
-					<div class="proceeds">
-						<%=image_tag('pink-heals-logo.png', alt: 'Ride the Island Poker Run, logo', class: 'img-responsive pinkheals') %>
-						<h3 class="text-center">All proceeds from this event will be donated to Pink Heals Inc.</h3>
-						<%= link_to "Learn More", pink_path, target:'_blank', class: 'reg-btn' %>
-					</div>
-				</div>
-
-				<div class="col-md-7 col-md-offset-1 col-xs-12">
-					<div class="sponsor-box">
-						<h2>Our Sponsors</h2>
-							<%= link_to(image_tag( 'gl-logo.jpg', alt: 'Ride the Island Sponsor - Ginny Lane Bar and Grill', class: 'img-responsive sponsor-logo'), ginnylane_path ) %>
-
-							<%= link_to(image_tag( 'hotspot.png', alt: 'Ride the Island Sponsor - The Hot Spot Music and Grub', class: 'img-responsive sponsor-logo'), hotspot_path ) %>
-
-							<%= link_to(image_tag( 'villagg-logo.png', alt: 'Ride the Island Sponsor - Villaggio Grille', class: 'img-responsive sponsor-logo'), villaggio_path ) %>
-
-							<%= link_to(image_tag( 'wharf-logo.png', alt: 'Ride the Island Sponsor - The Wharf', class: 'img-responsive sponsor-logo'), wharf_path ) %>
-					</div>
-			</div>
-		</div>
-	</section>
-	<div class="clearfix"></div>
-
 		<section id="stops">
 			<div class="container">
 
-				<div class="col-md-7">
-				<h2>Ride the Island Stops</h2>
+				<div class="col-md-6 no-padding">
+				<h2>Poker Run Stops</h2>
 					<div class="col-md-6">
 						<h3>The Wharf</h3>
 						<h3>Big Beach Brewing</h3>
@@ -77,12 +51,58 @@
 						<h3>Gilbey's Seafood &amp; Steak</h3>
 						<h3>Flora Bama Yacht Club</h3>
 						<h3>Pleasure Island Tiki Bar</h3>
-					</div>
+					 </div>
 				</div>
 
-				<div class="col-md-5 col-xs-12">
-					<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1oOmh-Ngp1DrVbp8zCOYDiEDLDQ0" width="99%" height="260"></iframe>
+				<div class="col-md-6 no-padding-r col-xs-12">
+					<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1oOmh-Ngp1DrVbp8zCOYDiEDLDQ0" width="95%" height="260"></iframe>
 				</div>
 			</div>
 		</section>
+
+		<section class="pinkheals">
+			<div class="container">
+					<div class="col-md-4 no-padding col-xs-12">
+						<div class="proceeds">
+							<%=image_tag('pink-heals-logo.png', alt: 'Ride the Island Poker Run, logo', class: 'img-responsive pinkheals-logo') %>
+							<h3 class="text-center">All proceeds from this event will be donated to Pink Heals Inc.</h3>
+						</div>
+					</div>
+
+					<div class="col-md-8 col-xs-12">
+						<div class="info-box">
+							<p><span>Pink Heals Inc</span> is
+								a program that enables communities to grow together, and support each other. Each chapter partners with local businessess and Public Safety teams throughout their community, to donate goods, services, and health care support to people who are in need. Pink Heals provides support to individuals and families, for all types of illnesses and struggles they may be enduring.
+							</p>
+
+							<p>The voluteers that work in this organization donate weeks, even months of their time, to traveling and inspiring other communities to embrace this initiative. The idea is to bring back the act of caring for people, and spreading support on a local level.</p>
+							<%= link_to "Learn More", pink_path, target:'_blank', class: 'reg-btn' %>
+						</div>
+					</div>
+			</div>
+		</section>
+
+		<section id="sponsors" class="sponsors">
+			<div class="container">
+					<div class="col-xs-12">
+						<h2>Our Sponsors</h2>
+						<div class="col-md-3 spons">
+							<%= link_to(image_tag( 'gl-logo.jpg', alt: 'Ride the Island Sponsor - Ginny Lane Bar and Grill', class: 'img-responsive sponsor-logo'), ginnylane_path, target: '_blank' ) %>
+						</div>
+
+						<div class="col-md-3 spons">
+							<%= link_to(image_tag( 'hotspot.png', alt: 'Ride the Island Sponsor - The Hot Spot Music and Grub', class: 'img-responsive sponsor-logo'), hotspot_path, target: '_blank' ) %>
+						</div>
+
+						<div class="col-md-3 spons">
+							<%= link_to(image_tag( 'villagg-logo.png', alt: 'Ride the Island Sponsor - Villaggio Grille', class: 'img-responsive sponsor-logo'), villaggio_path, target: '_blank' ) %>
+						</div>
+
+						<div class="col-md-3 spons">
+							<%= link_to(image_tag( 'wharf-logo.png', alt: 'Ride the Island Sponsor - The Wharf', class: 'img-responsive sponsor-logo'), wharf_path, target: '_blank' ) %>
+						</div>
+				</div>
+			</div>
+		</section>
+		<div class="clearfix"></div>
 </div>
