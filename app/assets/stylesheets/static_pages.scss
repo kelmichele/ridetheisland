@@ -100,8 +100,8 @@
 	    .pinkheals-logo{width: 35%;}
 		}
 
-		.sponsors { text-align:center;
-			.spons {display: inline-block; width: 42%; margin: auto; margin-bottom:20px;}
+		.sponsors { text-align:center; padding:20px 0;
+			.spons {display: inline-block; width: 32%; margin: auto; }
 		}
 	}
 
@@ -146,7 +146,7 @@
 		}
 
 		.sponsors { padding:20px 0;
-			.spons { width: 70%; @include center-block();}
+			.spons { width: 70%; @include center-block(); margin-bottom:20px;}
 		}
 	}
 

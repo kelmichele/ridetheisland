@@ -22,7 +22,7 @@
 							<div class="clearfix"></div>
 							<h3>April 1, 2017</h3>
 							<h3>Sign in: 2p.m.<br> Ride starts at 3p.m. </h3>
-							<h3>$25 per bike</h3>
+							<h3>$20 per bike</h3>
 							<%= link_to "Register Now", registration_path, class: 'reg-btn' %>
 					</div>
 
@@ -86,20 +86,18 @@
 			<div class="container">
 					<div class="col-xs-12">
 						<h2>Our Sponsors</h2>
-						<div class="col-md-3 spons">
-							<%= link_to(image_tag( 'gl-logo.jpg', alt: 'Ride the Island Sponsor - Ginny Lane Bar and Grill', class: 'img-responsive sponsor-logo'), ginnylane_path, target: '_blank' ) %>
-						</div>
+						<div class="col-md-10 col-md-offset-1 col-xs-12">
+							<div class="col-md-4 spons">
+								<%= link_to(image_tag( 'gl-logo.jpg', alt: 'Ride the Island Sponsor - Ginny Lane Bar and Grill', class: 'img-responsive sponsor-logo'), ginnylane_path, target: '_blank' ) %>
+							</div>
 
-						<div class="col-md-3 spons">
-							<%= link_to(image_tag( 'hotspot.png', alt: 'Ride the Island Sponsor - The Hot Spot Music and Grub', class: 'img-responsive sponsor-logo'), hotspot_path, target: '_blank' ) %>
-						</div>
+							<div class="col-md-4 spons">
+								<%= link_to(image_tag( 'villagg-logo.png', alt: 'Ride the Island Sponsor - Villaggio Grille', class: 'img-responsive sponsor-logo'), villaggio_path, target: '_blank' ) %>
+							</div>
 
-						<div class="col-md-3 spons">
-							<%= link_to(image_tag( 'villagg-logo.png', alt: 'Ride the Island Sponsor - Villaggio Grille', class: 'img-responsive sponsor-logo'), villaggio_path, target: '_blank' ) %>
-						</div>
-
-						<div class="col-md-3 spons">
-							<%= link_to(image_tag( 'wharf-logo.png', alt: 'Ride the Island Sponsor - The Wharf', class: 'img-responsive sponsor-logo'), wharf_path, target: '_blank' ) %>
+							<div class="col-md-4 spons">
+								<%= link_to(image_tag( 'wharf-logo.png', alt: 'Ride the Island Sponsor - The Wharf', class: 'img-responsive sponsor-logo'), wharf_path, target: '_blank' ) %>
+							</div>
 						</div>
 				</div>
 			</div>
