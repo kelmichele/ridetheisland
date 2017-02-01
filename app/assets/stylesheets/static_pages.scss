@@ -195,4 +195,26 @@
 				h3 {font-size: 20px;}
 			}
 		}
+
+		@include bp(sm) {
+			.page-head {background-image: url(image_path('bike-bw2-sm.jpg')); height: 250px;
+		    .box {margin-top:45%;}
+				h1 {font-size: 30px;}
+			}
+			.top {
+				.img-p {width: 37%; margin-left: 1%; padding: 0; }
+				.details {float: right; width: 60%;}
+				.xs-det {@include sec-default();}
+				.xs-btns {margin-right: 10%;}
+				.reg-btn.alt { @include sec-default();}
+			}
+			.reg-btn { width:80%;}
+		}
 }
+
+
+
+
+
+
+
