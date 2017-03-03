@@ -243,7 +243,70 @@
 		}
 }
 
+.gallery {
+	.page-head { height:300px;}
 
+	.gallerypage {@include sec-default(); text-align: center; padding: 40px 0;
+			.gallery {width: 25%; display: inline-block; margin: 30px;}
+	}
+
+
+		@include bp(tb) {
+			.page-head {height:280px;
+		    &::before {background-color: rgba($black, .6)}
+		    .box {margin-top:14%;}
+		    h3{ width: 85%; @include center-block();}
+			}
+
+			.gallerypage {
+				.gallery { margin: 15px;}
+			}
+		}
+
+		@include bp(mb) {
+			.page-head {
+				// height:200px;
+		    &::before {background-color: rgba($black, .7)}
+		    .box {margin-top:14%;}
+			}
+			.gallerypage {
+				.gallery { margin: 10px;}
+			}
+		}
+
+		@include bp(sm) {
+			.page-head {background-image: url(image_path('bike-bw2-sm.jpg')); height: 380px;
+		    .box {margin-top:57%;}
+				h1 {font-size: 30px;}
+			}
+			.gallerypage {
+				.gallery { margin: 15px auto; width: 80%; @include center-block();}
+			}
+		}
+
+		@include bp(iv) {
+			.page-head {
+		    .box {margin-top:47%;}
+				h1 {font-size: 30px;}
+				h3 {font-size: 18px;}
+			}
+			.gallerypage {
+				.gallery { margin: 15px auto; width: 80%; @include center-block();}
+			}
+		}
+
+		@include bp(xs) {
+			.page-head {
+		    .box {margin-top:65%;}
+				h1 {font-size: 30px;}
+				h3 {font-size: 18px;}
+			}
+			.gallerypage {
+				.gallery { margin: 15px auto; width: 80%; @include center-block();}
+			}
+		}
+
+}
 
 
 

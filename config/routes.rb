@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
   get '/registration', to: 'static_pages#registration'
+  get '/gallery', to: 'static_pages#gallery'
   get '/pink', to: 'links#pink'
   get '/ginnylane', to: 'links#ginnylane'
   get '/villaggio', to: 'links#villaggio'
