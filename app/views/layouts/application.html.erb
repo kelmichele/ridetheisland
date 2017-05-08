@@ -15,7 +15,8 @@
 		<![endif]-->
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	  <% unless current_page?(gallery_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
+    <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
 		<%= render 'layouts/gac' %>
   </head>
 
@@ -23,5 +24,9 @@
 		<%= render 'layouts/header' %>
 			<%= yield %>
 		<%= render 'layouts/footer' %>
+	 <% if current_page?(gallery_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
 	</body>
 </html>
+
+
+

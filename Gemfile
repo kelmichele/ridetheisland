@@ -18,6 +18,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'actionview-encoded_mail_to'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+gem 'lightbox2-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
