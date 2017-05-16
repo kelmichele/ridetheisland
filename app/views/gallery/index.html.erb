@@ -2,16 +2,26 @@
 <% @page_description = "Ride the Island Poker Run has 7 stops, located all over Pleasure Island, starting and ending at The Wharf. All proceeds from this event will be donated to Pink Heals Inc." %>
 
 <div class="page-head registration">
-	<div class="box"><h1>Photo Gallery</h1><h3>Look through all the pictures from our previous events, and be sure not to miss the next one! </h3></div>
+	<div class="box">
+		<h1>Photo Gallery</h1>
+		<h3>Take a look at the pictures from our latest event!</h3>
+	</div>
 </div>
 
 <section class="photo-gallery">
-	<% tag = 0 %>
+	<div class="intro-block">
+		<%= link_to('/jack', target: '_blank') do %>
+			<%= image_tag('jack-snow.png', class: 'img-responsive jack-logo', alt: 'Jack Snow Photographer Logo') %>
+			<p><span>Photo Credit: Jack Snow - jacksnowphoto.com</span><br>
+		<% end %>
+		If you see any pictures that you are interested in, contact <%= link_to "Jack Snow", jack_path, target: 'blank' %> for ordering options. </p>
+	</div>
 
+	<% tag = 0 %>
 	<% @photos.each do |photo| %>
 	  <% tag +=1 %>
 		<% link = "https://s3.amazonaws.com/ride-the-island/rti"+"#{tag}"+".jpg" %>
-		<%= link_to(image_tag("#{link}", class: 'img-responsive gall', alt: 'Ride the Island, Orange Beach, pictures from previous events'), image_path("#{link}"), data: { lightbox: "example-set"}) %>
+		<%= link_to(image_tag("#{link}", class: 'img-responsive gall', alt: 'Ride the Island, Orange Beach, pictures from previous events'), image_path("#{link}"), data: { lightbox: "example-set", title: "Photo Credit: Jack Snow"}) %>
 	<% end %>
 
 </section>

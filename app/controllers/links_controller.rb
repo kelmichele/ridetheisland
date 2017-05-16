@@ -33,4 +33,8 @@ class LinksController < ApplicationController
 	def hs
 			redirect_to('https://hsdesignhouse.com')
 	end
+
+	def jack
+		redirect_to('http://www.jacksnowphoto.com/')
+	end
 end

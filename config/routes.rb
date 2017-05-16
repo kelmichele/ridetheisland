@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/fb', to: 'links#fb'
   get '/map', to: 'links#map'
   get '/hs', to: 'links#hs'
+  get '/jack', to: 'links#jack'
 
   get '/gallery', to: 'gallery#index', as: 'gallery'
 

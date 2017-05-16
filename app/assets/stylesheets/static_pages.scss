@@ -107,10 +107,10 @@
 	}
 
 	@include bp(mb) {
-		.fullsite-intro {height:300px; background-position: bottom right;
+		.fullsite-intro {height:200px; background-position: bottom right;
 	    &::before { background-color: rgba($black, .7)}
 			.fullsite-header {
-				margin-top: 15%;
+				margin-top: 25px;
 				h1 {font-size: 40px;}
 				h2{font-size: 35px;}
 			}
@@ -122,15 +122,6 @@
 	}
 
 	@include bp(sm) {
-		// .fullsite-intro {height:370px; background-position: top left;
-		// 	background-image: url(image_path('beach-bike1-sm.jpg'));
-		// 	.fullsite-header {
-		// 		margin-top: 62%;
-		// 		h1 {font-size: 30px;}
-		// 		h2{font-size: 27px;margin-bottom: 0;}
-		// 	}
-		// }
-
 		.details { padding-bottom: 0;
 			.left {@include sec-default(); margin-top: 0; padding-bottom: 10px;}
 		}
@@ -151,42 +142,24 @@
 		}
 	}
 
-	@media (max-width: 568px) {
-		.fullsite-intro {height:380px;
+	@include bp(pp) {
+		.fullsite-intro {height:200px;
 			.fullsite-header {
-				margin-top: 47%;
-				h1 {font-size: 25px; padding-top:10px;}
-				h2, h3 {font-size: 20px;}
+				margin-top: 15px;
+				h1 {font-size: 32px;}
+				h2{font-size: 25px;}
+				h3{font-size: 18px;}
 			}
-		}
-	}
-
-	@media (max-width: 375px) {
-	 	.fullsite-intro {height:370px; background-position: top left;
-			background-image: url(image_path('beach-bike1-sm.jpg'));
-			.fullsite-header {
-				margin-top: 62%;
-				h1 {font-size: 30px;}
-				h2{font-size: 27px;margin-bottom: 0;}
-			}
-		}
-	}
-
-	@media (max-width: 320px) {
-		.fullsite-intro { height: 315px;
-			.fullsite-header h1 {font-size: 25px;}
-			.fullsite-header h2 {font-size: 21px;}
 		}
 	}
 
 	@include bp(xs) {
-		// .fullsite-intro {height:310px;
-		// 	.fullsite-header {
-		// 		margin-top: 42%;
-		// 		h1 {font-size: 25px; padding-top:30px;}
-		// 		h2, h3 {font-size: 20px;}
-		// 	}
-		// }
+		.fullsite-intro {height:160px;
+			.fullsite-header {
+				h1 {font-size: 27px;}
+				h2{font-size: 20px;}
+			}
+		}
 
 		.pinkheals h3 {font-size: 19px;}
 	}
@@ -254,6 +227,11 @@
 		}
 
 		@include bp(sm) {
+			.page-head {height:100px;
+		    .box {margin-top:20px;}
+				h1 {font-size: 30px;}
+			}
+
 			.left{width: 98%; margin-left: 1%;padding: 20px 10px 0px 10px;}
 			.top {
 				.img-p {width: 37%; margin-left: 1%; padding: 0; }
@@ -265,33 +243,31 @@
 			.reg-btn { width:80%;}
 		}
 
-	@media (max-width: 568px) {
-			.page-head { height:320px;
-		    .box {margin-top:45%;}
-				h1 {font-size: 30px;}
-			}
-	}
+	// @media (max-width: 568px) {
+	// 		.page-head { height:320px;
+	// 	    .box {margin-top:45%;}
+	// 			h1 {font-size: 30px;}
+	// 		}
+	// }
 
-	@media (max-width: 375px) {
-			.page-head {background-image: url(image_path('bike-bw2-sm.jpg')); height: 270px;
-		    .box {margin-top:56%;}
-				h1 {font-size: 30px;}
-			}
-	}
+	// @media (max-width: 375px) {
+	// 		.page-head {background-image: url(image_path('bike-bw2-sm.jpg')); height: 270px;
+	// 	    .box {margin-top:56%;}
+	// 			h1 {font-size: 30px;}
+	// 		}
+	// }
 
-	@media (max-width: 320px) {
-		.page-head { height:280px;
-	    .box {margin-top:65%;}
-		}
-	}
+	// @media (max-width: 320px) {
+	// 	.page-head { height:280px;
+	//     .box {margin-top:65%;}
+	// 	}
+	// }
 }
 
 .gallery {
-	.page-head { height:300px;}
-
-	.gallerypage {@include sec-default(); text-align: center; padding: 40px 0;
-			.gallery {width: 25%; display: inline-block; margin: 30px;}
-	}
+		.page-head {height:210px;
+	    .box {margin-top:6%;}
+		}
 
 		@include bp(tb) {
 			.page-head {height:280px;
@@ -299,66 +275,68 @@
 		    .box {margin-top:14%;}
 		    h3{ width: 85%; @include center-block();}
 			}
+		}
 
-			.gallerypage {
-				.gallery { margin: 15px;}
+		@include bp(md) {
+			.page-head {height:250px;
+		    h3{ width: 97%;}
 			}
 		}
 
 		@include bp(mb) {
-			.page-head {
-				// height:200px;
-		    &::before {background-color: rgba($black, .7)}
-		    .box {margin-top:14%;}
-			}
-			.gallerypage {
-				.gallery { margin: 10px;}
-			}
-		}
-
-		@include bp(sm) {
-			.gallerypage {
-				.gallery { margin: 15px auto; width: 80%; @include center-block();}
-			}
-		}
-
-		@include bp(iv) {
-			.gallerypage {
-				.gallery { margin: 15px auto; width: 80%; @include center-block();}
-			}
-		}
-
-		@include bp(xs) {
-			.gallerypage {
-				.gallery { margin: 15px auto; width: 80%; @include center-block();}
-			}
+			.page-head { height:130px;
+		    .box {margin-top:6%;}
+				h1 {font-size: 30px;}
+				h3 {font-size: 18px;}
+		  }
 		}
 
 		@media (max-width: 568px) {
-			.page-head { height: 380px;
-		    .box {margin-top:47%;}
-				h1 {font-size: 30px;}
-				h3 {font-size: 18px;}
-			}
-		}
-
-		@media (max-width: 375px) {
-			.page-head {background-image: url(image_path('bike-bw2-sm.jpg')); height: 380px;
-		    .box {margin-top:57%;}
-				h1 {font-size: 30px; }
-			}
-		}
-
-		@media (max-width: 320px) {
 			.page-head {
-		    .box {margin-top:65%;}
-				h1 {font-size: 30px;}
-				h3 {font-size: 18px;}
 			}
 		}
+
+		// @media (max-width: 375px) {
+		// 	.page-head {background-image: url(image_path('bike-bw2-sm.jpg')); height: 380px;
+		//     .box {margin-top:57%;}
+		// 		h1 {font-size: 30px; }
+		// 	}
+		// }
+
+		// @media (max-width: 320px) {
+		// 	.page-head {
+		//     .box {margin-top:65%;}
+		// 		h1 {font-size: 30px;}
+		// 		h3 {font-size: 18px;}
+		// 	}
+		// }
 }
 
 .photo-gallery { text-align: center;
-		@include sec-default(); padding: 40px;
-		.gall {width: 19.5%; display: inline-block; padding:5px; margin-bottom: 20px; max-height: 200px;}
+	@include sec-default(); padding: 40px 0px;
+	.intro-block{ padding-bottom:15px;
+		@include sec-default();
+		.jack-logo {@include center-block(); width: 125px;}
+		p span {font-size: 16px; color: $font-color}
 	}
+
+	.gall {width: 28%; display: inline-block; padding:5px; margin-bottom: 20px; max-height: 200px;}
+
+	@include bp(dt) {
+		padding: 40px;
+		.gall {width: 19.5%; }
+	}
+
+	@include bp(pp) {
+		.gall {width: 45%; }
+	}
+
+	@media (max-width: 568px) {
+		padding-top:15px;
+		.intro-block {padding: 0 10px 15px}
+	}
+
+	@include bp(xs) {
+		.gall {width: 85%; }
+	}
+}
